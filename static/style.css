@@ -1,0 +1,151 @@
+/* ---------- Base ---------- */
+body {
+  background-color: #f5f6f8;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  margin: 0;
+}
+
+/* ---------- Matrix: every cell has the SAME fixed pixel size,
+     regardless of condition. Table width = n_cols × CELL_W.
+---------- */
+
+/* Single source of truth for cell size */
+:root {
+  --cell-w: 110px;
+  --cell-h: 56px;
+}
+
+.matrix-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  /* width is NOT 100% — it grows only as needed based on column count,
+     so every cell keeps the same pixel size across all conditions */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center the choice panel under the table at the same width */
+.choice-panel {
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.matrix-table th,
+.matrix-table td {
+  width: var(--cell-w);
+  min-width: var(--cell-w);
+  max-width: var(--cell-w);
+  height: var(--cell-h);
+  min-height: var(--cell-h);
+  max-height: var(--cell-h);
+  padding: 0;
+  margin: 0;
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.matrix-table thead th {
+  background-color: #f8f9fa;
+}
+
+.corner-cell {
+  background-color: #f8f9fa;
+}
+
+.apt-header {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.dim-header {
+  padding: 4px !important;
+}
+
+.dim-header .dim-ko {
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dim-header .dim-en {
+  font-size: 0.82rem;
+  color: #212529;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* Info cell button fills its td exactly — opening cannot resize the cell.
+   Cell size stays fixed (var(--cell-w) x var(--cell-h)); long content wraps
+   onto multiple lines instead of being cut off with an ellipsis. */
+.info-cell {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #fff;
+  color: #495057;
+  font-size: 0.82rem;
+  padding: 2px;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.15;
+  /* Allow wrapping inside the fixed-size cell. Cell size itself is NOT
+     changed — width/height stay at var(--cell-w) x var(--cell-h) on the td. */
+  white-space: normal;
+  word-break: keep-all;       /* don't split English words mid-letter */
+  overflow-wrap: anywhere;    /* but allow breaks for tokens longer than the cell */
+  overflow: hidden;
+}
+
+.info-cell:hover {
+  background-color: #f1f3f5;
+}
+
+.info-cell.opened {
+  background-color: #e7f3ff;
+  color: #0d6efd;
+  font-weight: 600;
+  cursor: default;
+}
+
+.info-cell.opened:hover {
+  background-color: #e7f3ff;
+}
+
+.cell-placeholder {
+  color: #adb5bd;
+  font-size: 0.78rem;
+}
+
+/* ---------- Choice panel (positioning handled above) ---------- */
+.choice-panel {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 12px 16px;
+}
+
+.choice-btn.selected {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}

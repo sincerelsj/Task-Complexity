@@ -1,0 +1,16 @@
+[
+  {
+    "file": "assets/experiment-overview-handdrawn.png",
+    "sha256": "90c2402e16dc43633c9f5ad06cf05fc75eba8e4f8b4c408a72fec2e018071a1e",
+    "width": 1860,
+    "height": 846,
+    "provenance": "AI-generated conceptual hand-drawn overview; schematic paths are illustrative"
+  },
+  {
+    "file": "assets/experiment-interface-original.png",
+    "sha256": "47813d80f0db959904763f75eb9747b42b5198b1710bcc8be42972171b25590e",
+    "width": 2104,
+    "height": 1231,
+    "provenance": "User-provided screenshot; copied byte-for-byte without editing"
+  }
+]

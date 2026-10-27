@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Complete{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow-sm text-center">
+      <div class="card-body p-5">
+        <h2 class="mb-3">Thank You</h2>
+        <p class="text-muted mb-4">
+          Participant <strong>{{ subject_id }}</strong> has completed
+          condition <strong>{{ condition_id }}</strong>.
+        </p>
+        <p>Your response has been saved successfully.</p>
+        <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Back to Main</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

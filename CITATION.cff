@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying HAI 2026 paper when using this research code."
+type: software
+title: "Task Complexity for AI Agents: Research Code"
+authors:
+  - family-names: Lee
+    given-names: Seungju
+  - family-names: Cha
+    given-names: Minchul
+preferred-citation:
+  type: conference-paper
+  title: "How Task Complexity Shapes Information Search Patterns in Agents for Computer Use"
+  authors:
+    - family-names: Lee
+      given-names: Seungju
+    - family-names: Cha
+      given-names: Minchul
+  year: 2026
+  doi: 10.1145/3841580.3845692
+  collection-title: "Proceedings of the 14th International Conference on Human-Agent Interaction"

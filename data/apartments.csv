@@ -1,0 +1,13 @@
+apartment_id,distance,room_size,rent,laundry,natural_light,noise_level,furniture,parking,security,view,bathroom,transport
+A,5-minute walk,12 square meters,"₩400,000",Nearby laundromat,Moderate,Moderate,Fully furnished,No parking,Main road,Park view ,Standard ,30-minute walk
+B,30-minute walk,25 square meters,"₩800,000",Private washer,Moderate,Moderate,Unfurnished,Free parking,Main road,Building view ,Standard ,5-minute walk
+C,5-minute walk,17 square meters,"₩800,000",Shared laundry,High,Moderate,Basic furniture,No parking,Near police station,Building view ,Standard ,15-minute walk
+D,30-minute walk,17 square meters,"₩400,000",Shared laundry,Low,Moderate,Basic furniture,Free parking,Dark alley,Park view ,Standard ,15-minute walk
+E,15-minute walk,25 square meters,"₩600,000",Nearby laundromat,High,High,Fully furnished,No parking,Main road,Street view ,Newly renovated,30-minute walk
+F,15-minute walk,12 square meters,"₩600,000",Private washer,Low,Low,Unfurnished,Free parking,Main road,Street view ,Old,5-minute walk
+G,5-minute walk,12 square meters,"₩600,000",Shared laundry,High,Moderate,Unfurnished,Paid parking,Near police station,Street view ,Standard ,30-minute walk
+H,30-minute walk,25 square meters,"₩600,000",Shared laundry,Low,Moderate,Fully furnished,Paid parking,Dark alley,Street view ,Standard ,5-minute walk
+I,15-minute walk,17 square meters,"₩400,000",Nearby laundromat,Moderate,Low,Basic furniture,No parking,Near police station,Building view ,Newly renovated,30-minute walk
+J,15-minute walk,17 square meters,"₩800,000",Private washer,Moderate,High,Basic furniture,Free parking,Dark alley,Park view ,Old,5-minute walk
+K,5-minute walk,17 square meters,"₩600,000",Nearby laundromat,High,High,Basic furniture,Paid parking,Near police station,Street view ,Old,15-minute walk
+L,30-minute walk,17 square meters,"₩600,000",Private washer,Low,Low,Basic furniture,Paid parking,Dark alley,Street view ,Newly renovated,15-minute walk

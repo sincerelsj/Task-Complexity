@@ -1,0 +1,46 @@
+# docker-compose.yml — OpenAI Computer Use runner for Task_Complexity.
+#
+# Prereq: build the shared base image first (one-time):
+#   cd ../  (= agents/)
+#   docker build -f _base/Dockerfile -t task-complexity/agents-base:latest .
+#
+# Then from this directory:
+#   $env:OPENAI_API_KEY = "sk-..."
+#   docker compose build
+#   docker compose run --rm agent `
+#     --url "http://host.docker.internal:5000/experiment?subject=OAICU__gpt-5.4-mini__001&condition=C5&participant_type=agent&agent_framework=openai_computer_use&agent_model=gpt-5.4-mini" `
+#     --task "..." `
+#     --subject-id "OAICU__gpt-5.4-mini__001" `
+#     --condition-id "C5" `
+#     --framework-code OAICU `
+#     --agent-model "gpt-5.4-mini"
+#
+# Live observation: http://localhost:6080/vnc.html
+
+services:
+  agent:
+    build:
+      context: ..          # parent = Task_Complexity/agents/
+      dockerfile: openai_computer_use/Dockerfile
+    image: task-complexity/oaicu:latest
+    environment:
+      EXPERIMENT_PRICING_JSON: "${EXPERIMENT_PRICING_JSON:-}"
+      OPENAI_API_KEY: "${OPENAI_API_KEY}"
+      # Display dims — must match Dockerfile ENV and Computer Use tool decl.
+      # IMPORTANT: aspect ratio MUST equal MODEL_WIDTH:MODEL_HEIGHT (1280:800 = 16:10).
+      # 1920x1200 is 16:10; 1920x1080 (16:9) would distort the screenshot during
+      # downscale and break click coordinate mapping (see error_log #07).
+      WIDTH: "1920"
+      HEIGHT: "1200"
+      MODEL_WIDTH: "1280"
+      MODEL_HEIGHT: "800"
+      DISPLAY: ":1"
+      DISPLAY_NUM: "1"
+    ports:
+      - "6080:6080"
+    volumes:
+      - "../../logs/agent_traces:/workspace/traces"
+      - "~/.openai:/home/computeruse/.openai"
+    shm_size: "2gb"
+    stdin_open: true
+    tty: true

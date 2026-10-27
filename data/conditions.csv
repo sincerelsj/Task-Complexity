@@ -1,0 +1,13 @@
+condition_id,n_alternatives,n_dimensions,label
+C1,2,4,2 alt × 4 dim (low complexity)
+C2,2,8,2 alt × 8 dim
+C3,2,12,2 alt × 12 dim
+C4,4,4,4 alt × 4 dim
+C5,4,8,4 alt × 8 dim
+C6,4,12,4 alt × 12 dim
+C7,8,4,8 alt × 4 dim
+C8,8,8,8 alt × 8 dim
+C9,8,12,8 alt × 12 dim
+C10,12,4,12 alt × 4 dim
+C11,12,8,12 alt × 8 dim
+C12,12,12,12 alt × 12 dim (high complexity)

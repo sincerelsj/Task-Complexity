@@ -1,0 +1,447 @@
+[
+  {
+    "file": "agents/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_base/Dockerfile",
+    "sha256": "1187a6afbf548ab06fc37345dfd4aab8f2909d1856ca98a673d04d51c85326dc",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_base/image/chromium_startup.sh",
+    "sha256": "108845fa74c3a35e6742ddc31bc603ebc2a5794f415433fc360f1d7e4baa0a95",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_base/image/entrypoint.sh",
+    "sha256": "459f90fb2684696484a9fcbfb16d81bf484d0bb7ae32365e2a0c683bdf5b111c",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_base/image/mutter_startup.sh",
+    "sha256": "c3bf2ff0c444b95f37c5506160b6045d1aa86c5fbf53f6fb06dc6d0c27a5e28f",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_base/image/novnc_startup.sh",
+    "sha256": "6e89622db5548b6eaeeac0249e338a5731e1d60c32097457e00ba1b2b2bac145",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_base/image/x11vnc_startup.sh",
+    "sha256": "c951f1b5ce19d5c76d78c5455091f789d56bfd68149d3305552f8da11837127c",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_base/image/xvfb_startup.sh",
+    "sha256": "78633ae566d9c739b0b8f5e7bb55d45c12f593f42d57847f5057fa4be531a3e7",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_shared/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_shared/prompts.py",
+    "sha256": "2c6b0cd34e383ec997f02684d23d08a8ed918cdaa307adb6f94b95d788f2863d",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_shared/token_accounting.py",
+    "sha256": "8cfda6cf3aa78b688962fdb7cbc4865475d03a7e6d25101f69135906cdee9a29",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/_shared/trace_logger.py",
+    "sha256": "7b388ad12e3cfc9313a641de9c8ad9184e6bc0d6ffb07a04d5548f9c665b2db5",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/browser_use/Dockerfile",
+    "sha256": "4ac62219b1b9377e1920e6d9eb18c97bcdff7efff114fe2e6fabc3261d0df498",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/browser_use/docker-compose.yml",
+    "sha256": "354453a7168d8797cbd0e5d1f5eedb2186740bcb88ea73595c9a2357edf9cb50",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/browser_use/runner/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/browser_use/runner/loop.py",
+    "sha256": "9272d6b583d108f3862a941a58311abab0ebfb010208d61a0a1b796200b91e70",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/browser_use/runner/run_session.py",
+    "sha256": "0657672fa9a883b8452e86622dbf6201409a3fa9198e40a4235e4234f50d8725",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/claude_in_chrome/Dockerfile",
+    "sha256": "9aa22388ebcc4e1654528f1d7cc5df50de8cde99c75822b8275bc21f9d49edd5",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/claude_in_chrome/docker-compose.yml",
+    "sha256": "9a8312b29cfbabb36e4ace878b5e7e3612881a9f8417ae8a87119a2e0d59e6bc",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/claude_in_chrome/runner/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/claude_in_chrome/runner/browser.py",
+    "sha256": "c3c90437227b2f6872af7e803f81d6f4271c29e2dbc247fc21e82eab3998b2a5",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/claude_in_chrome/runner/loop.py",
+    "sha256": "defe0985a850922baac6d8792a0189082773187141cc89874fde6b8895024d0c",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/claude_in_chrome/runner/run_session.py",
+    "sha256": "56675aa1e73d8501ac33397fc78bdefece8ef42804d2c8667b7040ca71aaf64d",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/claude_in_chrome/runner/tools.py",
+    "sha256": "e8a533186c4958a67cd957f9eb4544c1860339684f7ab18ec242e8e480134737",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/Dockerfile",
+    "sha256": "8e107500099df54bd7775b275a1314fa27d2d313c06b4da57c683e148e3feb5f",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/docker-compose.yml",
+    "sha256": "f31b0e03c51d38888427f88225b8c71e4d3dc4c1bdebd68b3a4b91442386101f",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/computer_use/image/chromium_startup.sh",
+    "sha256": "7982228e996a09d6ee3a1c710e2318339fb0db42cf1a9e3884613bb8fcf60832",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/image/entrypoint.sh",
+    "sha256": "6be32d07cd8c78e25304a1121ab185b999627ff61b3dd11462e2da17d6bfa92f",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/image/mutter_startup.sh",
+    "sha256": "c3bf2ff0c444b95f37c5506160b6045d1aa86c5fbf53f6fb06dc6d0c27a5e28f",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/image/novnc_startup.sh",
+    "sha256": "6e89622db5548b6eaeeac0249e338a5731e1d60c32097457e00ba1b2b2bac145",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/image/x11vnc_startup.sh",
+    "sha256": "c951f1b5ce19d5c76d78c5455091f789d56bfd68149d3305552f8da11837127c",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/image/xvfb_startup.sh",
+    "sha256": "78633ae566d9c739b0b8f5e7bb55d45c12f593f42d57847f5057fa4be531a3e7",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/runner/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/runner/loop.py",
+    "sha256": "aad69bd9b4d59ab597f9a3645390f244514c85bd38771274652bcd79e6f7b626",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/runner/run_session.py",
+    "sha256": "f438e287ed46436fcce48a6f8b49b2cd7b2bb3a9c463bfae1cb686eaed68e164",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/computer_use/runner/tools.py",
+    "sha256": "0a3e859b97313d0d716d4ae2005614f34b04be5eae30ab8c6746cb4e2475872b",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/computer_use/runner/trace_logger.py",
+    "sha256": "8f3b8d0d8568ef2242290c67b123b4e10725bdc4cf1a038fe07b2ae0831a07a8",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/gemini_computer_use/Dockerfile",
+    "sha256": "4cbab91babe1ce74abcd75b7da9fcf8fad727e7ee8eab186717eb3d9baea1c23",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/gemini_computer_use/docker-compose.yml",
+    "sha256": "989af8b1f6edaa0d7256a37c3b3d7bb7365aa7cd80e6557ef98ceac158ba0ffc",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/gemini_computer_use/runner/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/gemini_computer_use/runner/loop.py",
+    "sha256": "d1ffb08decc93757c7123dec5aede38cf81b277418658f21612ea37f1fc71a4e",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/gemini_computer_use/runner/run_session.py",
+    "sha256": "6c3ac3f978a27a8c0dbb921813fdb6e8613da6e57aa2d458fa564851f17ff560",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/gemini_computer_use/runner/tools.py",
+    "sha256": "d92cdb72f8505bb6b9d7ccf90695487216788e333466bba22eb245bb27fb201e",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/langchain_playwright/Dockerfile",
+    "sha256": "b685b89563df4e3a2e8dbf2b58b1f7627d92177530674eef1ab8d0659fb8aca7",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/langchain_playwright/docker-compose.yml",
+    "sha256": "5c56bc8c0c3354f1e92fb980f58f473d351fd4aa3cf93978e49fef10fa56228c",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/langchain_playwright/runner/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/langchain_playwright/runner/loop.py",
+    "sha256": "7c5c6e131380d7376852735e2b4f59f2cb376385fe3c9164d36414a9f955118c",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/langchain_playwright/runner/run_session.py",
+    "sha256": "1e7d3fad621a3028374597610196562e65a111ee961f4b6f4d2696834480b61f",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/openai_computer_use/Dockerfile",
+    "sha256": "b94a3c462ae60304619ac01dbde54978cb9bf61946c6fabe89ab4afbe8a1ae47",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/openai_computer_use/docker-compose.yml",
+    "sha256": "5cd579c759407c831ceda82448e023343857f3b5406366023475fd56c5824627",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/openai_computer_use/runner/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/openai_computer_use/runner/loop.py",
+    "sha256": "7cb0e545ba6a7e7bc09e408b3e17f800047ecdfde84b0269db97e12d5c0444e8",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/openai_computer_use/runner/run_session.py",
+    "sha256": "6d7abb1e2d77a3046d27eca015e5aad4f1d1df683fa60789b847cccb5f2a6707",
+    "packaging_edit": true
+  },
+  {
+    "file": "agents/openai_computer_use/runner/tools.py",
+    "sha256": "c84370c818bba27d3b940df2f29f66f446258dda69ede8faa110ece42deba2a8",
+    "packaging_edit": false
+  },
+  {
+    "file": "agents/registry.py",
+    "sha256": "c10f194672530202750a9461a569d5e48b7acc17a7b923443c9a31a9c787f624",
+    "packaging_edit": false
+  },
+  {
+    "file": "analysis/arc_search/compute_arc.py",
+    "sha256": "274649d4d7b6779683c773fe9b2cc862e21f6aea1de9f6689963b004b787bb32",
+    "packaging_edit": true
+  },
+  {
+    "file": "analysis/arc_search/test_compute_arc.py",
+    "sha256": "94edac97b2a98aa4b6c3025f4ed36b8a61bec9fc0df7c8e46669a3e56eda649b",
+    "packaging_edit": false
+  },
+  {
+    "file": "app.py",
+    "sha256": "8fbad39e49ac4571950798e9d13945e8b577718568ad6d96d942230602a0064f",
+    "packaging_edit": false
+  },
+  {
+    "file": "data/apartments.csv",
+    "sha256": "9457cb746b23d7cf169aefdc4e183c4165eb784feb432e25609aff56a3131402",
+    "packaging_edit": false
+  },
+  {
+    "file": "data/conditions.csv",
+    "sha256": "83b3aa3175209916668d84801d5d74c9f66d754f463611b61c1f6c65a8270838",
+    "packaging_edit": false
+  },
+  {
+    "file": "data/dimensions.csv",
+    "sha256": "1ef47f175b1d555c5385e721c2bcc260975f702a0829cb1a988599aa102d1f63",
+    "packaging_edit": false
+  },
+  {
+    "file": "docs/08_time_pressure_throttle.md",
+    "sha256": "4eacd53a2c7e6891ccd5ddc6510c5c448159466e5e8e74f0230bfaa90d972408",
+    "packaging_edit": true
+  },
+  {
+    "file": "docs/10_experimental_control_matrix.md",
+    "sha256": "3cb0c1c3b295d9c6da3145adbfdf3d519e965a889af5976214a38db98b0e792e",
+    "packaging_edit": false
+  },
+  {
+    "file": "requirements.txt",
+    "sha256": "595c9070cc654ae603a631534cf5eb4a8209e65c76da671538f40ac6b7c2851d",
+    "packaging_edit": false
+  },
+  {
+    "file": "run_anthcu_all_conditions.ps1",
+    "sha256": "415800482ad7eb385e3a43c0ac44c9a1b6e6f2edfaae34225506e72ded9808eb",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_anthcu_time_pressure.ps1",
+    "sha256": "8bd0b28ee5ad6d17f3ef688f944e30b76775131088fb55a34c80f013190666ea",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_brouse_all_conditions.ps1",
+    "sha256": "b171e09fb7aec7c3946c1623dbbbebb6b8b114290de9e0bd6d55b9597274d35c",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_brouse_time_pressure.ps1",
+    "sha256": "8565338f1eb15ba0e8d2935787ff2e688a93a8c5c494cce335161893db469cd1",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_c12_cost_probe.ps1",
+    "sha256": "ee627932774b0511d5f0008b1d7b2f7f0adcf6a3edebba4cae1145c68aba3e12",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_claude_3tier_c1_to_c12.ps1",
+    "sha256": "75efbd6e0bb81a6d00300a0466e2994931d3ce32edeb75169c1206f7d89831e8",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_cldcr_all_conditions.ps1",
+    "sha256": "b1a2b975544c26b801e7d503842261a5d1cc7c23fb04142ed9ac68e86d529629",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_cldcr_time_pressure.ps1",
+    "sha256": "58b1ff54c9c4aef3aa15049eb9c270c0b638562f866ce1b8edc14b46933b3c07",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_gemcu_all_conditions.ps1",
+    "sha256": "f8faa7477d5eb4194115a7e833dac3a1a8eff6258a35120c61cfa613b8078d6c",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_gemcu_time_pressure.ps1",
+    "sha256": "a1fc798c73e5635d8481fe9c105b7842839bcfcb86e145863a83ccdbd25e00fb",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_lcpw_all_conditions.ps1",
+    "sha256": "8234d2bd49322947b2cf025eb92679b909c8b2c61449fa34d90e51c87edc7c7d",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_lcpw_time_pressure.ps1",
+    "sha256": "f479a525d884f5eb55f7bc65095b18d6846422c32bd9fb86e1794e521969f4c8",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_oaicu_all_conditions.ps1",
+    "sha256": "ec4a807eef366a52846387ce0cdcfc43923252d3c85fb67cc974d3a57f3a3a38",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_oaicu_time_pressure.ps1",
+    "sha256": "d0233b37969802f69a08587f27f2aada281f6249120d8ee071b6a2a5f9327b24",
+    "packaging_edit": true
+  },
+  {
+    "file": "run_smoke_c1_other5.ps1",
+    "sha256": "329925c982c0d35debcd135fa243b4ef8308d9d77e6839bb4d9714774b213a2e",
+    "packaging_edit": true
+  },
+  {
+    "file": "static/style.css",
+    "sha256": "1a06694435a9b2379f28c491454dbfe2a3fda2825378f1aea172aef57437eb7f",
+    "packaging_edit": false
+  },
+  {
+    "file": "static/tracker.js",
+    "sha256": "d6029800a51a2135f720d047c4a529eb90721e780d0ee2789cbfca854d242ca0",
+    "packaging_edit": false
+  },
+  {
+    "file": "task_prompt.txt",
+    "sha256": "97e44572d864121b7760a35aa0d227b6d6010fc1f0acf51a34338f7e21f3d13f",
+    "packaging_edit": false
+  },
+  {
+    "file": "templates/base.html",
+    "sha256": "2fb336b26b7aa980fd42f707050616773f144c6a9abadb207fdfc396ea8808e3",
+    "packaging_edit": false
+  },
+  {
+    "file": "templates/complete.html",
+    "sha256": "2cb287bd6023ec56aed3f3a4071b03fa3855e457b1d687dcf647a7bd50a273e8",
+    "packaging_edit": false
+  },
+  {
+    "file": "templates/experiment.html",
+    "sha256": "3377ec3f17545a92cf160f61492a0d33cbbc2597671b4e4d90d7bab12613e3e2",
+    "packaging_edit": false
+  },
+  {
+    "file": "templates/index.html",
+    "sha256": "8c6ce6475bde8dc8d236cb808fad29a5926ffe66591eed83ea3467cfa6e1a5d4",
+    "packaging_edit": false
+  },
+  {
+    "file": "tools/verify_experimental_controls.py",
+    "sha256": "bca48614e62969bc31aa22e7768f73d341c3ebcb097802e6dd63e5aea1b7a43f",
+    "packaging_edit": true
+  },
+  {
+    "file": "tools/verify_token_accounting.py",
+    "sha256": "7b412f8c2ecacde67f10030b0646fb91a580cdb3e91c3cf53a7458333b79b06a",
+    "packaging_edit": false
+  },
+  {
+    "file": "analysis/audit_action_effects.py",
+    "packaging_edit": false,
+    "sha256": "4058afa4ca4f55e9b401e90507e2b2c7503bc8aac4b45751368018cd99ebf848"
+  }
+]

@@ -1,0 +1,39 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+secrets/
+**/credentials*.json
+**/*service-account*.json
+*.pem
+*.key
+# Research records and generated outputs
+logs/
+logs_*/
+**/agent_traces/
+analysis/**/output/
+analysis/**/private/
+costs/private/
+**/screenshots/
+# Local runtimes and build artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+node_modules/
+.git/
+*.log
+*.tmp
+*.bak
+*.tar
+*.tar.gz
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# User-entered billing configuration
+costs/pricing.local.json

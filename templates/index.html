@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Main - Select Experiment Condition{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-7">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h3 class="card-title mb-3">Start Experiment</h3>
+        <p class="text-muted">
+          You will choose the apartment you most prefer among several alternatives.
+          Click a cell to reveal its information; once opened, the information stays visible.
+          Explore as much or as little information as you like.
+        </p>
+        <form action="{{ url_for('experiment') }}" method="get" class="mt-4">
+          <div class="mb-3">
+            <label for="subject" class="form-label fw-bold">Participant ID</label>
+            <input type="text" id="subject" name="subject" class="form-control"
+                   placeholder="e.g., S01, P034" required autocomplete="off">
+            <div class="form-text">Enter a unique ID for each experiment session.</div>
+          </div>
+          <div class="mb-4">
+            <label for="condition" class="form-label fw-bold">Experiment Condition</label>
+            <select id="condition" name="condition" class="form-select" required>
+              <option value="" disabled selected>Select a condition</option>
+              {% for c in conditions %}
+                <option value="{{ c.condition_id }}">{{ c.condition_id }}</option>
+              {% endfor %}
+            </select>
+            <div class="form-text">
+              12 conditions in total. Each participant completes all conditions in order (within-subject).
+            </div>
+          </div>
+          <div class="form-check form-switch mb-4">
+            <input class="form-check-input" type="checkbox" role="switch"
+                   id="shuffle" name="shuffle" value="1">
+            <label class="form-check-label" for="shuffle">
+              Randomize alternative order
+            </label>
+            <div class="form-text">
+              Rows are re-lettered A, B, C&hellip; by position each trial; the original apartment
+              mapping is logged. Leave off to keep the fixed order (matches the agent runs).
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg w-100">Start Experiment</button>
+        </form>
+      </div>
+    </div>
+    <div class="text-muted mt-3 small text-center">
+      Based on Payne (1976) Experiment 2 &middot; 12-condition environment
+    </div>
+  </div>
+</div>
+{% endblock %}
