@@ -16,7 +16,7 @@ Compute separate scores using apartment and dimension categories. A zero denomin
 
 ## Inputs and Execution
 
-Acquisitions require `subject_id`, `model`, `condition`, `n_alternatives`, `n_dimensions`, `acquisition_order`, `apartment_id`, and `dimension_id`. Each row is one first acquisition. Session inputs must use the same session keys and condition metadata; see validation in `compute_arc.py` for optional comparison fields. Historical defaults point to private paper-analysis paths; use explicit files in a fresh clone:
+Acquisitions require `subject_id`, `model`, `condition`, `n_alternatives`, `n_dimensions`, `acquisition_order`, `apartment_id`, and `dimension_id`. Each row is one first acquisition. Session inputs must use the same session keys and condition metadata; see validation in `compute_arc.py` for optional comparison fields. Supply your local input paths:
 
 ```powershell
 python analysis/arc_search/compute_arc.py `

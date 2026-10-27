@@ -1,23 +1,21 @@
-# How Task Complexity Shapes Information Search Patterns in Agents for Computer Use
+# Task-Complexity
 
-**Seungju Lee · Minchul Cha** · Hankuk University of Foreign Studies<br>
-**HAI ’26** · November 16–19, 2026 · Osaka, Japan
+**How Task Complexity Shapes Information Search Patterns in Agents for Computer Use**
+
+Seungju Lee · Minchul Cha · Hankuk University of Foreign Studies<br>
+HAI ’26 · November 16–19, 2026 · Osaka, Japan
 
 [Paper](https://doi.org/10.1145/3841580.3845692) · [Experiment](docs/experiment/README.md) · [Agents](agents/README.md) · [Analysis](analysis/README.md) · [Citation](paper/README.md#citation)
 
-![Hand-drawn overview: vary task complexity, explore and choose, then trace information-search behavior](assets/experiment-overview-handdrawn.png)
+![Hand-drawn experiment overview](assets/experiment-overview-handdrawn.png)
 
 ## Overview
 
-How does task complexity shape what an AI agent explores before making a decision? This project reimplements Payne’s information-board task as a web-based apartment-selection experiment: **4 alternative counts × 3 dimension counts = 12 conditions**.
+A web-based information-board experiment for studying how AI agents explore information before choosing an apartment. The task crosses **2/4/8/12 alternatives × 4/8/12 dimensions**, producing **12 conditions**.
 
-The paper examines search amount and search structure, using Payne’s published human results as a historical comparison. The implementation provides a shared browser task, behavioral logs, and six agent integrations. **The six supported frameworks are a software capability; the paper reports a narrower ACU study.**
+The code provides click-to-reveal information cells, six agent integrations, shared behavioral logging, agent traces, and search-pattern analysis.
 
-### Experiment Interface
-
-![Original experiment interface with revealed and masked apartment attributes](assets/experiment-interface-original.png)
-
-*Original experiment screenshot, reproduced without editing.*
+![Original experiment interface](assets/experiment-interface-original.png)
 
 ## Quick Start
 
@@ -27,14 +25,12 @@ With Python 3.10+ and the dependencies in `requirements.txt` installed:
 python app.py
 ```
 
-Open **http://localhost:5000**, enter a new participant ID, and choose a condition. The web task needs no API key. See [environment setup](docs/experiment/README.md) for installation and [agent setup](agents/README.md) for Docker and API configuration.
+Open **http://localhost:5000**. Enter a participant ID and select a condition. See [web setup](docs/experiment/README.md) for installation and [agent setup](agents/README.md) for Docker and API keys.
 
-## Explore the Code
+## Components
 
-- [Web experiment](docs/experiment/README.md): interface, routes, conditions, and behavioral logging.
-- [Agent implementations](agents/README.md): six runners, shared prompts, and trace format.
-- [Analysis](analysis/README.md): search proportion, Search Index, search variability, and ARC.
-- [Cost configuration](costs/README.md): user-entered prices, cache accounting, and estimate limitations.
-- [Reproducibility](docs/README.md): controls, verification, and release scope.
-
-Detailed implementation notes live with each component. Experiment logs and credentials are excluded. Paper metadata and BibTeX are in [paper/](paper/README.md); the source-code license remains to be selected.
+- [Experiment](docs/experiment/README.md): interface, conditions, and event logs.
+- [Agents](agents/README.md): six implementations and execution commands.
+- [Analysis](analysis/README.md): Search Index, ARC, and action classification.
+- [Cost configuration](costs/README.md): enter your own model prices.
+- [Documentation](docs/README.md): settings, batch runners, and development tools.

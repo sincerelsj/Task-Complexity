@@ -2,7 +2,7 @@
 
 DOM-only model input with restricted DOM-read and click tools. Navigation is performed before the agent starts. Saved screenshots are trace-only artifacts.
 
-**Default model:** `claude-haiku-4-5`. **Credential:** `ANTHROPIC_API_KEY for the default model`. Defaults describe the bundled implementation, not the full set of models evaluated in the paper.
+**Default model:** `claude-haiku-4-5`. **Credential:** `ANTHROPIC_API_KEY for the default model`.
 
 ## Build
 

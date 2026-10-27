@@ -2,7 +2,7 @@
 
 Responses API computer-tool observations and pixel actions, executed through X11. At most one executable action is applied before a fresh screenshot.
 
-**Default model:** `gpt-5.4-mini`. **Credential:** `OPENAI_API_KEY`. Defaults describe the bundled implementation, not the full set of models evaluated in the paper.
+**Default model:** `gpt-5.4-mini`. **Credential:** `OPENAI_API_KEY`.
 
 ## Build
 

@@ -21,7 +21,7 @@ Alternatives are apartment rows; dimensions are columns. Each cell starts masked
 
 The condition matrix crosses 2/4/8/12 alternatives with 4/8/12 dimensions. Cell values are fetched through `/reveal` and are not embedded in the initial DOM, preventing DOM-based agents from reading unrevealed values. Do not alter the task wording or CSVs to improve appearance.
 
-The optional human row-randomization switch is off by default. Keep it off to match fixed-order agent runs; this additional capability is not evidence that new human data were collected for the paper.
+The row-randomization switch shuffles apartment display order and records its mapping. It is off by default for fixed-order agent sessions.
 
 ## HTTP Interface
 

@@ -1,7 +1,6 @@
 # Experimental control matrix
 
-> 작성일: 2026-05-27
-> 목적: 6개 프레임워크가 같은 실험 조건을 유지하는지 점검하는 기준표.
+Shared experimental settings for the six agent implementations.
 
 ## 원칙
 
@@ -75,7 +74,7 @@ Provider-specific parameter names:
 
 ## Current model matrix
 
-Current defaults as of 2026-06-02:
+Default model settings:
 
 | Framework | Current model setting |
 |---|---|

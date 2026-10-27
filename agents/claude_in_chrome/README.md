@@ -2,7 +2,7 @@
 
 Screenshot-based reasoning with project-defined tools executed through Playwright/CDP. This is a custom API adapter, not an official Chrome extension.
 
-**Default model:** `claude-haiku-4-5`. **Credential:** `ANTHROPIC_API_KEY`. Defaults describe the bundled implementation, not the full set of models evaluated in the paper.
+**Default model:** `claude-haiku-4-5`. **Credential:** `ANTHROPIC_API_KEY`.
 
 ## Build
 

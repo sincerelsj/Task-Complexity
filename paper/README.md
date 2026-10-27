@@ -6,7 +6,7 @@ Proceedings of the 14th International Conference on Human-Agent Interaction (HAI
 
 [Publisher DOI](https://doi.org/10.1145/3841580.3845692)
 
-Metadata is transcribed from the final author-provided PDF. DOI resolution was not confirmed during packaging. This source release does not redistribute manuscript drafts or the PDF; use the publisher link.
+Code and experimental materials for the accompanying HAI 2026 paper.
 
 ## Citation
 
@@ -24,4 +24,4 @@ Metadata is transcribed from the final author-provided PDF. DOI resolution was n
 }
 ```
 
-The paper states CC BY 4.0. This statement applies to the paper; a separate source-code license has not yet been selected.
+The paper is licensed under CC BY 4.0.

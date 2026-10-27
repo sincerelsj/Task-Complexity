@@ -2,7 +2,7 @@
 
 Screenshot-based actions executed through X11. Screenshots travel through provider image/media fields. Developer API and optional Vertex AI authentication are supported.
 
-**Default model:** `gemini-3-flash-preview`. **Credential:** `GEMINI_API_KEY or GOOGLE_API_KEY`. Defaults describe the bundled implementation, not the full set of models evaluated in the paper.
+**Default model:** `gemini-3-flash-preview`. **Credential:** `GEMINI_API_KEY or GOOGLE_API_KEY`.
 
 ## Build
 

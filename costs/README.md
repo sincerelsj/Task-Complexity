@@ -29,9 +29,9 @@ python costs/estimate.py --ledger <token_usage.jsonl>
 
 After saving your local prices, run `. .\tools\load_api_keys.ps1` from the repository root. The loader forwards price JSON through `EXPERIMENT_PRICING_JSON`; Compose passes it to all six runners. Only rates for the selected full model ID are used.
 
-The final runner JSON contains `estimated_cost_usd`, `cost_estimate_status`, and the user rates actually used. These fields stay flat for compatibility with batch parsers. Missing or invalid prices yield JSON `null` and an explicit status. Per-call token records remain available independently of pricing. Rebuild framework images before using this packaging change.
+The final runner JSON contains `estimated_cost_usd`, `cost_estimate_status`, and the user rates actually used. These fields stay flat for compatibility with batch parsers. Missing or invalid prices yield JSON `null` and an explicit status. Per-call token records remain available independently of pricing.
 
-Historical batch helpers no longer invent independent estimates. Their cost fields may be `not_configured` or refer you to the token ledger; calculate comparable totals with the ledger tool.
+Batch cost fields use `not_configured` when prices are absent. Calculate totals from normalized token ledgers with the commands above.
 
 ## Accounting Rules
 

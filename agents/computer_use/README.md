@@ -2,7 +2,7 @@
 
 Screenshot reasoning and xdotool/X11 execution. Haiku 4.5 uses the older supported Computer Use beta; other configured models use the newer tool path.
 
-**Default model:** `claude-sonnet-4-6`. **Credential:** `ANTHROPIC_API_KEY`. Defaults describe the bundled implementation, not the full set of models evaluated in the paper.
+**Default model:** `claude-sonnet-4-6`. **Credential:** `ANTHROPIC_API_KEY`.
 
 ## Build
 

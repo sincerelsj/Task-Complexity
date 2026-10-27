@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite the accompanying HAI 2026 paper when using this research code."
 type: software
-title: "Task Complexity for AI Agents: Research Code"
+title: "Task-Complexity"
 authors:
   - family-names: Lee
     given-names: Seungju

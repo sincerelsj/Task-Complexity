@@ -1,6 +1,6 @@
 # Agent Implementations
 
-All runners interact with the same Flask task. Shared prompts and logging live in [_shared/](_shared/README.md); `registry.py` defines framework codes and subject IDs. The paper's model study is narrower than the six-framework implementation provided here.
+All runners interact with the same Flask task. Shared prompts and logging live in [_shared/](_shared/README.md); `registry.py` defines framework codes and subject IDs.
 
 ## Choose a Runner
 
@@ -25,7 +25,7 @@ Anthropic runners require `ANTHROPIC_API_KEY`; OpenAI requires `OPENAI_API_KEY`;
 
 ## Build and Observe
 
-Start Flask in a separate terminal. Build the [shared base image](_base/README.md), then build your selected framework. These commands install software inside Docker images; execute them only when you intend to prepare the runtime. Rebuild both the base and selected framework for the shared user-pricing module in this package.
+Start Flask in a separate terminal. Build the [shared base image](_base/README.md), then build your selected framework. These commands install software inside Docker images; execute them only when you intend to prepare the runtime.
 
 Live observation uses `docker compose run --rm --service-ports ...` and `http://localhost:6080/vnc.html`. The six Compose services share port 6080, so run them sequentially.
 

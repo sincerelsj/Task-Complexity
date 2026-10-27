@@ -2,7 +2,7 @@
 
 The browser-use library manages the agent loop and browser observations. max_actions_per_step=1 preserves the common action granularity. Other model variants must remain separate in logging and analysis.
 
-**Default model:** `gpt-5.4-mini`. **Credential:** `OPENAI_API_KEY for the default model`. Defaults describe the bundled implementation, not the full set of models evaluated in the paper.
+**Default model:** `gpt-5.4-mini`. **Credential:** `OPENAI_API_KEY for the default model`.
 
 ## Build
 

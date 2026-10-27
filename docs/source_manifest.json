@@ -306,13 +306,13 @@
   },
   {
     "file": "docs/08_time_pressure_throttle.md",
-    "sha256": "4eacd53a2c7e6891ccd5ddc6510c5c448159466e5e8e74f0230bfaa90d972408",
+    "sha256": "aae9261ebf129754acb216fe2d8375fe8380ea10a3bcea06c7aed68827f3287f",
     "packaging_edit": true
   },
   {
     "file": "docs/10_experimental_control_matrix.md",
-    "sha256": "3cb0c1c3b295d9c6da3145adbfdf3d519e965a889af5976214a38db98b0e792e",
-    "packaging_edit": false
+    "sha256": "f6ea965fd4f5e9fa7abcba1505d4089c665aa6abd5235f7872a5663fb695ea80",
+    "packaging_edit": true
   },
   {
     "file": "requirements.txt",
