@@ -1,0 +1,13 @@
+dim_id,column_name,display_name_ko,display_name_en,min_condition_level
+1,distance,캠퍼스까지 거리,Distance from Campus,4
+2,room_size,방 크기,Room Size,4
+3,rent,월세,Rent,4
+4,laundry,세탁 시설,Laundry Facilities,4
+5,natural_light,채광,Natural Light,8
+6,noise_level,소음 수준,Noise Level,8
+7,furniture,가구 옵션,Included Appliances,8
+8,parking,주차 가능 여부,Parking,8
+9,security,보안,Security,12
+10,view,전망,View,12
+11,bathroom,화장실 상태,bathroom condition,12
+12,transport,교통 편의성,Transportation,12

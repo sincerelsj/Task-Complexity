@@ -1,0 +1,33 @@
+# docker-compose.yml — LangChain Playwright runner for Task_Complexity.
+#
+# Prereq: build the shared base image first:
+#   cd ../  (= agents/)
+#   docker build -f _base/Dockerfile -t task-complexity/agents-base:latest .
+
+services:
+  agent:
+    build:
+      context: ..
+      dockerfile: langchain_playwright/Dockerfile
+    image: task-complexity/lcpw:latest
+    environment:
+      EXPERIMENT_PRICING_JSON: "${EXPERIMENT_PRICING_JSON:-}"
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY}"
+      OPENAI_API_KEY: "${OPENAI_API_KEY}"
+      GOOGLE_API_KEY: "${GOOGLE_API_KEY}"
+      GEMINI_API_KEY: "${GEMINI_API_KEY}"
+      # Aspect ratio matched to pixel frameworks (1920:1200 = 1280:800 = 16:10).
+      # See agents/claude_in_chrome/docker-compose.yml comment for rationale.
+      WIDTH: "1920"
+      HEIGHT: "1200"
+      DISPLAY: ":1"
+      DISPLAY_NUM: "1"
+      # The runner launches its own Playwright Chromium.
+      SKIP_CHROMIUM_AUTO_OPEN: "1"
+    ports:
+      - "6080:6080"
+    volumes:
+      - "../../logs/agent_traces:/workspace/traces"
+    shm_size: "2gb"
+    stdin_open: true
+    tty: true

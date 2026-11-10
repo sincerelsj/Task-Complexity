@@ -1,0 +1,39 @@
+# docker-compose.yml — Gemini Computer Use runner for Task_Complexity.
+#
+# Prereq: build the shared base image first:
+#   cd ../  (= agents/)
+#   docker build -f _base/Dockerfile -t task-complexity/agents-base:latest .
+
+services:
+  agent:
+    build:
+      context: ..
+      dockerfile: gemini_computer_use/Dockerfile
+    image: task-complexity/gemcu:latest
+    environment:
+      EXPERIMENT_PRICING_JSON: "${EXPERIMENT_PRICING_JSON:-}"
+      # Gemini Developer API auth.
+      GEMINI_API_KEY: "${GEMINI_API_KEY:-}"
+      GOOGLE_API_KEY: "${GOOGLE_API_KEY:-}"
+      # Vertex AI auth. If GOOGLE_GENAI_USE_VERTEXAI=true, the runner ignores
+      # API keys and uses Application Default Credentials instead.
+      GOOGLE_GENAI_USE_VERTEXAI: "${GOOGLE_GENAI_USE_VERTEXAI:-}"
+      GOOGLE_CLOUD_PROJECT: "${GOOGLE_CLOUD_PROJECT:-}"
+      GOOGLE_CLOUD_LOCATION: "${GOOGLE_CLOUD_LOCATION:-}"
+      GOOGLE_APPLICATION_CREDENTIALS: "${GOOGLE_APPLICATION_CREDENTIALS:-}"
+      # Display dims — aspect ratio MUST match 1280:800 = 1920:1200 = 16:10.
+      # 1920x1200 is 16:10; 1920x1080 (16:9) would distort downscaling.
+      WIDTH: "1920"
+      HEIGHT: "1200"
+      MODEL_WIDTH: "1280"
+      MODEL_HEIGHT: "800"
+      DISPLAY: ":1"
+      DISPLAY_NUM: "1"
+    ports:
+      - "6080:6080"
+    volumes:
+      - "../../logs/agent_traces:/workspace/traces"
+      - "../../secrets:/workspace/secrets:ro"
+    shm_size: "2gb"
+    stdin_open: true
+    tty: true

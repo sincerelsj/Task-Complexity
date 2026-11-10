@@ -1,0 +1,53 @@
+# docker-compose.yml — Anthropic Computer Use runner for Task_Complexity.
+#
+# Build context is the parent `agents/` directory so the image can pull in
+# the shared registry.py alongside the computer_use/ subtree.
+#
+# Usage (PowerShell, from Task_Complexity/agents/computer_use/):
+#
+#   $env:ANTHROPIC_API_KEY = "your_API_key_here"
+#   docker compose build
+#   docker compose run --rm agent `
+#     --url "http://host.docker.internal:5000/experiment?subject=ANTHCU__claude-sonnet-4-6__001&condition=C5&participant_type=agent&agent_framework=anthropic_computer_use&agent_model=claude-sonnet-4-6" `
+#     --task "The web page below shows several apartments. Click a cell to reveal its information. Explore freely, then select and submit the one apartment you most prefer." `
+#     --subject-id "ANTHCU__claude-sonnet-4-6__001" `
+#     --condition-id "C5" `
+#     --framework-code ANTHCU `
+#     --agent-model "claude-sonnet-4-6"
+#
+# Observe live at http://localhost:6080/vnc.html (password-less).
+
+services:
+  agent:
+    build:
+      context: ..          # parent = Task_Complexity/agents/
+      dockerfile: computer_use/Dockerfile
+    image: task-complexity/anthropic-cu:latest
+    environment:
+      EXPERIMENT_PRICING_JSON: "${EXPERIMENT_PRICING_JSON:-}"
+      # Pass through the Anthropic API key from the host shell.
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY}"
+      # Display dims — must match Dockerfile ENV and Computer Use tool decl.
+      # IMPORTANT: aspect ratio MUST equal MODEL_WIDTH:MODEL_HEIGHT (1280:800 = 16:10).
+      # 1920x1200 is 16:10; 1920x1080 (16:9) would distort the screenshot during
+      # downscale and break click coordinate mapping (see error_log #07).
+      WIDTH: "1920"
+      HEIGHT: "1200"
+      MODEL_WIDTH: "1280"
+      MODEL_HEIGHT: "800"
+      DISPLAY: ":1"
+      DISPLAY_NUM: "1"
+    ports:
+      # noVNC — open http://localhost:6080/vnc.html to watch the session.
+      - "6080:6080"
+    volumes:
+      # Layer-2 agent traces → host-visible folder.
+      # Windows PowerShell resolves ${PWD} to an absolute path automatically.
+      - "../../logs/agent_traces:/workspace/traces"
+      # Cache Anthropic SDK state (optional; keeps some metadata between runs).
+      - "~/.anthropic:/home/computeruse/.anthropic"
+    # Prevent Chromium shared-memory issues under Docker.
+    shm_size: "2gb"
+    # stdin_open + tty so run_session.py output streams back nicely.
+    stdin_open: true
+    tty: true

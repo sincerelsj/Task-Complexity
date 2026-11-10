@@ -1,0 +1,1 @@
+The web page below shows several apartments. Click a cell to reveal its information. Explore freely, then select and submit the one apartment you most prefer.

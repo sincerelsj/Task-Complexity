@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}{{ condition_id }} - Experiment in Progress{% endblock %}
+
+{% block content %}
+<table class="matrix-table">
+  <thead>
+    <tr>
+      <th class="corner-cell"></th>
+      {% for d in dimensions %}
+        <th class="dim-header">
+          <div class="dim-en">{{ d.display_name_en }}</div>
+        </th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+    <tr>
+      <th class="apt-header">{{ row.display_label }}</th>
+      {% for d in dimensions %}
+        <td class="cell-td">
+          <button type="button"
+                  class="info-cell"
+                  data-apartment="{{ row.stimulus_alt_id }}"
+                  data-display="{{ row.display_label }}"
+                  data-dimension="{{ d.column_name }}">
+            <span class="cell-placeholder">Click</span>
+            <span class="cell-value d-none"></span>
+          </button>
+        </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div class="choice-panel mt-3">
+  <div class="d-flex align-items-center flex-wrap gap-2">
+    <span class="fw-bold me-2">Final choice:</span>
+    {% for row in rows %}
+      <button type="button" class="btn btn-sm btn-outline-primary choice-btn"
+              data-choice="{{ row.stimulus_alt_id }}"
+              data-display="{{ row.display_label }}">
+        {{ row.display_label }}
+      </button>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  window.EXPERIMENT_CONFIG = {
+    subject_id: {{ subject_id | tojson }},
+    condition_id: {{ condition_id | tojson }},
+    started_at_ms: {{ started_at_ms }},
+    n_alternatives: {{ condition.n_alternatives }},
+    n_dimensions: {{ condition.n_dimensions }},
+    participant_type: {{ participant_type | tojson }},
+    agent_framework: {{ agent_framework | tojson }},
+    agent_model: {{ agent_model | tojson }},
+    shuffle: {{ shuffle | tojson }},
+    display_map: {{ display_map | tojson }}
+  };
+</script>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='tracker.js') }}"></script>
+{% endblock %}
